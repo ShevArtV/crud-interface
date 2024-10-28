@@ -131,7 +131,7 @@ class Users
             $output .= $this->pdoTools->getChunk($properties['tpl'], $item);
         }
 
-        $this->modx->setPlaceholder($properties['totalVar'], $total);
+        $this->modx->setPlaceholder($properties['totalVar'] ?? 'total', $total);
         return $output;
     }
 
